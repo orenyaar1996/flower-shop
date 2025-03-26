@@ -1,18 +1,28 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Flower Delivery Store
+A simple Java application simulating an order and delivery management system for a flower and plant store. Orders are queued and grouped by city for efficient delivery.
+
+## Getting Started
+This project is built using Java and is designed to run in Visual Studio Code.
+
+To run the app, open DeliveryManager.java and run the main method. The system will simulate adding multiple orders and process deliveries periodically.
 
 ## Folder Structure
+- src/ – Source files:
+  - Item.java: Abstract class representing a purchasable item.
+  - Flower.java, Plant.java: Concrete item types.
+  - Order.java: Represents a customer order.
+  - Store.java: Handles order management and delivery logic.
+  - DeliveryManager.java: Entry point of the application.
 
-The workspace contains two folders by default, where:
+- lib/ – External dependencies (none required for this project).
+- bin/ – Compiled output files (created automatically).
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Features
+- Supports two item types: Flowers and Plants.
+- Manages orders by city to optimize delivery.
+- Scheduled delivery creation every 10 seconds.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Notes
+- Delivery size is limited to a maximum number of items per delivery run.
+- Items are priced differently based on type and attributes (e.g., pot included for plants).
